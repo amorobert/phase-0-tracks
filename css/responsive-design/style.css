@@ -23,7 +23,7 @@ cite {
 }
 
 /* you're welcome to edit the
-image, figure, and figcaption CSS if you'd like, 
+image, figure, and figcaption CSS if you'd like,
 but it's optional! */
 img {
   width: 100%;
@@ -47,4 +47,21 @@ main {
   width: 75%;
   display: inline-block;
   vertical-align: top;
+}
+
+@media screen and (max-width: 500px) {
+  body {
+    background-color: hotpink;
+  }
+}
+@media screen and (max-width: 500px) {
+  main {
+    width: 100%
+  }
+}
+
+@media screen and (max-width: 500px) {
+  section {
+    width: 100%
+  }
 }
