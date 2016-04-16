@@ -18,9 +18,9 @@ def encrypt ()
   while n <= text.length
       if text[n] != " "
         text[n] = "#{text[n]}".next
-        n += 1
+        n = n + 1
       elsif text[n] = " "
-        n +=1
+        n += 1
       end
   end
   puts text
@@ -29,17 +29,6 @@ end
 def decrypt()
   puts "Enter a string"
   text = String(gets.chomp)
-  #Performs letter advance
-  n = 0
-  while n <= text.length
-      if text[n] != " "
-        text[n] = "#{text[n]}".next
-        n += 1
-      elsif text[n] = " "
-        n +=1
-      end
-  end
-#Returns value of n to zero and restores string to original state
   n = 0
   alphabet = "abcdefghijklmnopqrstuvwxyz"
   while n <= text.length
