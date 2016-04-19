@@ -13,7 +13,7 @@ numOfEmployees.times do
   age = Integer(gets.chomp)
   puts "What year were you born?"
   birthYear = Integer(gets.chomp)
-  puts "Our company cafeteria serves gaarlic bread. Should we order some for you? (y or n)"
+  puts "Our company cafeteria serves garlic bread. Should we order some for you? (y or n)"
   garlicAnswr = String(gets.chomp)
   puts "Would you like to enroll in the company's health insurance? (y or n)"
   healthAnswr = String(gets.chomp)
@@ -22,23 +22,9 @@ numOfEmployees.times do
   n = 0
 
   puts "Enter any allergies you have one by one. Type done if you have none or when finished."
-  loop do
-    allergies[n] = String(gets.chomp)
-    n += 1
-    break if allergies[n-1] == "done"
-  end
-
-  x = 0
-  array_length = allergies.length
-  while x < array_length
-    if allergies[x] == "sunshine"
-      confirmed = "Probably a vampire."
-      puts confirmed
-    else
-      confirmed = "Keep checking..."
-    end
-
-    if confirmed == "Probably a vampire"
+while allergies[n] = gets.chomp
+  case allergies[n]
+  when "done"
       if (2016 - age == birthYear) && ((garlicAnswr == "y") || (healthAnswr == "y"))
         puts "Probably not a vampire."
       elsif (2016 - age != birthYear) && ((garlicAnswr == "n") || (healthAnswr == "n"))
@@ -50,7 +36,12 @@ numOfEmployees.times do
       else
         puts "Results conclusive"
       end
-    end
+    break
+  when "sunshine"
+    puts "Probably a vampire."
+    break
+  else
+    print "Next allergy: "
   end
 end
   puts "Actually, never mind! What do these questions have to do with anything? Let's all be friends."
