@@ -32,7 +32,6 @@
 # => "Elementary, my dear Watson!"
 
 "z".ord
-"z".bytes
 # => 122
 # (What is the significance of the number 122 in relation to the character z?)
 
