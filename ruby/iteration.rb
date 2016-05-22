@@ -7,7 +7,7 @@ students.each do |name, major|
   puts name
 end
 
-#modify hash  with .mao
+#modify hash  with .map
 modified_students = students.map do |name, major|
   major.upcase
 end
@@ -19,7 +19,6 @@ p modified_students
 
 #declare an array
 junkfood = ["Cookies", "Cake", "Cupcakes"]
-modified_junkfood= []
 
 #iterate through array with .each
 junkfood.each do |food|
