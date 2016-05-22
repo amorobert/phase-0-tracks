@@ -35,7 +35,7 @@ p grinch.get_mad_at("Dasher")
 puts "The Grinch is #{grinch.ethnicity} and is #{grinch.age} years old."
 =end
 genders = ["male", "female", "asexual", "N/A", "female", "genius", "bigender","agender", "female", "bigender", "male", "female", "gender fluid", "N/A"]
-ethnicities = ["Sayain", "Greek", "songle cell organism", "robot", "prefer not to say", "Kanye", "Namekian", "black", "Latino", "white", "Japanese-African", "prefer not to say", "Mystical Creature (unicorn)", "N/A"]
+ethnicities = ["Sayain", "Greek", "single cell organism", "robot", "prefer not to say", "Kanye", "Namekian", "black", "Latino", "white", "Japanese-African", "prefer not to say", "Mystical Creature (unicorn)", "N/A"]
 100.times do
    new_santa = Santa.new(genders.sample, ethnicities.sample)
    rand(141).times {new_santa.celebrate_birthday}
