@@ -14,4 +14,12 @@ describe Dancer do
     dancer.age = 34
     expect(dancer.age).to eq 34
   end
+
+  it "twirls" do
+  expect(dancer.pirouette).to eq "*twirls*"
+end
+
+it "bows to a partner" do
+  expect(dancer.bow).to eq "*bows*"
+end
 end
