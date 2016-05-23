@@ -1,3 +1,4 @@
+require_relative 'fantasy_dancers'
 describe Dancer do
   let(:dancer) { Dancer.new("Misty Copeland", 33) }
 
