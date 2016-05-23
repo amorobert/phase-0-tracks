@@ -4,7 +4,7 @@
 # multiply two integers and return an integer
 
 # RSpec
-# 'describe' block for each group of tests  
+# 'describe' block for each group of tests
   # 'it' block for each individual test
     # expect(<YOUR CODE>).to eq <RESULT>
 
