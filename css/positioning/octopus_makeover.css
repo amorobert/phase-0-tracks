@@ -1,0 +1,24 @@
+.swagger {
+  margin-left: auto;
+  margin-right: auto;
+  width: fit-content;
+}
+
+#octopus {
+  padding-top: 75px;
+  padding-left: 25px;
+  z-index: 0;
+  position: fixed;
+}
+
+#glasses {
+  padding-left: 70px;
+  padding-top: 175px;
+  z-index:2;
+  position: absolute;
+}
+
+#hat {
+  z-index: 1;
+  position: absolute;
+}

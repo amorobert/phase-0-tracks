@@ -1,0 +1,19 @@
+#Elevator Algorithm
+-Choose what number floor you want to visit(An integer value)
+-For each number button
+  -Check if the buttons face value is equal to your desired floor number
+    -If the button is equal to your floor
+      -Press it!
+    -If the button is not equal to your floor
+      -Move on to the next floor
+    -If none of the buttons match your floor
+      -Find a taller building buddy!
+
+#House Training the puppy
+-If it is his scheduled time to go out
+  -Take the dog out
+-If it isn't his scheduled time to go out
+  -If he is whining or acting strange
+    -Take him outside!
+  -if he is acting normal
+    -Continue your regularly scheduled program
