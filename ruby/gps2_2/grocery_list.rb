@@ -40,6 +40,10 @@
 # output:string
 
 def create_list(items)
+  list = {}
+  items = items.split(' ')
+  items.each {|index| list << {items[index] => 1}}
+  p list
 end
 
 def add_item(item)
@@ -53,3 +57,5 @@ end
 
 def print_list
 end
+test_list = nil
+test_list.create_list("carrots apples cereal pizza")
