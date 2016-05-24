@@ -1,7 +1,9 @@
 require_relative 'grocery_list'
 
 describe Electronic_grocery_list do
-  let(:list) {"carrots" => 1, "apples" => 1, "cereal" => 1, "pizza" => 1}
+  let(:list) { {"carrots" => 1, "apples" => 1, "cereal" => 1, "pizza" => 1} }
+
+
   it "creates a new list" do
     list = {}
     expect(list.create_list("carrots apples cereal pizza")).to eq {"carrots" => 1, "apples" => 1, "cereal" => 1, "pizza" => 1}
