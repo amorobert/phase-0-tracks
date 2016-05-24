@@ -7,7 +7,7 @@
 # output: hash
 
 # Method to add an item to a list
-# input: item and optional quantity (example: "apples 6")
+# input: item and optional quantity (example: "bagels 6")
 # steps:
   #Set the variable 'list' equal to the hash output of the print method
   #Store input item and quantity as key, value pair in 'list'
@@ -31,7 +31,7 @@
   #identify the index of item to to update
   #set the quantity of the item to the new quantity
   # print the 'list' to the console using the print method
-# output:
+# output:hash
 
 # Method to print a list and make it look pretty
 # input: none
@@ -40,3 +40,16 @@
 # output:string
 
 def create_list(items)
+end
+
+def add_item(item)
+end
+
+def remove_item(item)
+end
+
+def update_quantity(item, quantity)
+end
+
+def print_list
+end
