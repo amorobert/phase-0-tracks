@@ -45,7 +45,7 @@ def create_list(items)
   temp_array = items.split(' ')
   puts "I'm splitting the string argument, '#{items}', into an array of strings, #{temp_array}"
   temp_array.each {|item| list[item] = 1}
-  puts "I'm saving these strings, #{items.split(' ')}, as keys of the list hash with default values of 1, #{list}"
+  puts "I'm saving these strings, #{temp_array}, as keys of the list hash with default values of 1, #{list}"
   $master_list = list
   print_list
 end
@@ -85,5 +85,24 @@ def print_list
   $master_list
 end
 
-create_list("carrots apples cereal pizza")
-add_item("bagels 6")
+create_list("")
+add_item("lemonade 6")
+add_item("tomatoes 3")
+add_item("onions 1")
+add_item("ice_cream 4")
+remove_item("lemonade")
+update_quantity("ice_cream 1")
+print_list
+
+# What did you learn about pseudocode from working on this challenge?
+#I learned that th more thurough your pseudocode is, the easier it is to write your code.
+# What are the tradeoffs of using arrays and hashes for this challenge?
+#Not sure
+# What does a method return?
+#a methd returns its last evaluated line
+# What kind of things can you pass into methods as arguments?
+#You can pass variables and other methods
+# How can you pass information between methods?
+#I used a global variable
+# What concepts were solidified in this challenge, and what concepts are still confusing?
+#I was able to figure out how to get my code to work, bu I'm pretty sure I didn't complete it using the inteneded method
