@@ -105,4 +105,4 @@ print_list
 # How can you pass information between methods?
 #I used a global variable
 # What concepts were solidified in this challenge, and what concepts are still confusing?
-#I was able to figure out how to get my code to work, bu I'm pretty sure I didn't complete it using the inteneded method
+#I was able to figure out how to get my code to work, but I'm not sure if I complete it using the inteneded techniques
