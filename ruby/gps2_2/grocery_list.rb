@@ -38,24 +38,52 @@
 # steps:
   #Print each key value pair using the puts method
 # output:string
+$master_list = {}
 
 def create_list(items)
   list = {}
-  items = items.split(' ')
-  items.each {|index| list << {items[index] => 1}}
-  p list
+  temp_array = items.split(' ')
+  puts "I'm splitting the string argument, '#{items}', into an array of strings, #{temp_array}"
+  temp_array.each {|item| list[item] = 1}
+  puts "I'm saving these strings, #{items.split(' ')}, as keys of the list hash with default values of 1, #{list}"
+  $master_list = list
+  print_list
 end
 
-def add_item(item)
+def add_item(item_and_quantity)
+  temp_array = item_and_quantity.split(' ')
+  puts "I'm splitting the string argument, '#{item_and_quantity}', into an array of strings, #{temp_array}"
+  item = temp_array[0]
+  quantity = temp_array[1].to_i
+  if quantity == nil
+    $master_list[item] = 1
+  else
+    $master_list[item] = quantity
+  end
+  puts "I'm storing the first string, '#{item}', as a new key in the list hash. The second string, '#{quantity}', is being stored as the key's integer value if provided, otherwise the value defaults to 1. "
+    print_list
 end
 
 def remove_item(item)
+  $master_list.delete(item)
+  puts "I'm deleting the key, value pair for '#{item}' from the list hash"
+  print_list
 end
 
-def update_quantity(item, quantity)
+def update_quantity(item_and_quantity)
+  temp_array = item_and_quantity.split(' ')
+  puts "I'm splitting the string argument, '#{item_and_quantity}', into an array of strings, #{temp_array}"
+  item = temp_array[0]
+  quantity = temp_array[1].to_i
+  $master_list[item] = quantity
+    puts "I'm using the first string, '#{item}', to identify the key in the list hash. The second string, '#{quantity}', is overwritting the key's value as an integer"
+  print_list
 end
 
 def print_list
+  $master_list.each{|item, quantity| puts "#{item}: #{quantity}"}
+  $master_list
 end
-test_list = nil
-test_list.create_list("carrots apples cereal pizza")
+
+create_list("carrots apples cereal pizza")
+add_item("bagels 6")
