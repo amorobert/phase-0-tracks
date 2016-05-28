@@ -1,4 +1,4 @@
-//Paired with Bjorn John Ramos 
+//Paired with Bjorn John Ramos
 //Release 1
 horseName = ["Yeezy", "Amy", "Mary", "Kali"]
 horseColor = ["blue", "red", "orange", "yellow" ]
@@ -10,7 +10,7 @@ function newHorses(name, color) {
     horseObject[horseName[i]] = horseColor[i];
   }
 
-  for(i = 0; i < horseName.length; i++){
+  for(i = 0; i < horseName.length; i++) {
     console.log("Name: " + Object.keys(horseObject)[i] + "  Color: " + horseObject[horseName[i]]);
   }
 }
