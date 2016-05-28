@@ -1,0 +1,3 @@
+-Store the array of strings in the variable wordAarray
+-Loop for a many times as the length of the array
+  -IF the string stored in the first index of wordArray
