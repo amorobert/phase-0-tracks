@@ -11,7 +11,7 @@ function newHorses(name, color) {
   }
 
   for(i = 0; i < horseName.length; i++) {
-    console.log("Name: " + Object.keys(horseObject)[i] + "  Color: " + horseObject[horseName[i]]);
+    console.log("Name: " + Object.keys(horseObject)[i] + "  Color: " + horseObject[Object.keys(horseObject)[i]]);
   }
 }
 newHorses(horseName, horseColor)
