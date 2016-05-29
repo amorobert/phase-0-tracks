@@ -18,7 +18,7 @@ function Longest(Array){
       wordArray[i] = temp;
     }else {};
   };
-  console.log(wordArray)
+  console.log(wordArray);
 }
 
-Longest(["abcde", "abcd", "abc", "ab", "a"])
+Longest(["abcde", "abcd", "abc", "ab", "a"]);
