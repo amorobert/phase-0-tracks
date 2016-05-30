@@ -8,17 +8,22 @@
 //       -Check the two subsequent indexes using the same conditions
 //     -ELSE the string stored in the first index of wordArray is more than the second index
 //       -Set swap equal to false
-function Longest(Array){
-  wordArray= Array;
+function Longest(wordArray) {
+  var not_sorted;
 
-  for (i = 0; i <= wordArray.length - i; i++) {
-    if (wordArray[i] > wordArray[i+1]) {
-      temp = wordArray[i];
-      wordArray[i] = wordArray[i+1];
-      wordArray[i] = temp;
-    }else {};
-  };
-  console.log(wordArray);
+    do {
+      not_sorted = false;
+      for (i = 0; i < wordArray.length - 1; i++) {
+          if (wordArray[i].length > wordArray[i + 1].length) {
+            var temp = wordArray[i];
+            wordArray[i] = wordArray[i + 1];
+            wordArray[i + 1] = temp;
+            not_sorted = true;
+          }
+        }
+    } while (not_sorted);
+  console.log(wordArray[wordArray.length - 1]);
 }
 
+Longest(["Robert", "Bjorn", "Garret", "Amelia", "Susan"]);
 Longest(["abcde", "abcd", "abc", "ab", "a"]);

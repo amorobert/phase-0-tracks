@@ -6,12 +6,12 @@ horseColor = ["blue", "red", "orange", "yellow" ]
 function newHorses(name, color) {
   horseObject = {};
 
-  for(var i = 0; i < horseName.length; i++) {
-    horseObject[horseName[i]] = horseColor[i];
+  for(var i = 0; i < name.length; i++) {
+    horseObject[name[i]] = color[i];
   }
 
-  for(i = 0; i < horseName.length; i++) {
-    console.log("Name: " + Object.keys(horseObject)[i] + "  Color: " + horseObject[horseName[i]]);
+  for(i = 0; i < name.length; i++) {
+    console.log("Name: " + Object.keys(horseObject)[i] + "  Color: " + horseObject[name[i]]);
   }
 }
 newHorses(horseName, horseColor)
