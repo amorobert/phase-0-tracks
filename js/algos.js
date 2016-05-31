@@ -26,8 +26,6 @@ function longest(wordArray) {
         }
     } while (not_sorted);
 
-  console.log(wordArray[wordArray.length - 1]);
-
   return wordArray[wordArray.length - 1];
 }
 ///////////////////////////////////////////////////
@@ -57,9 +55,7 @@ function match(object1, object2){
 
   if (matchCount >= 1) { matchFound = true; }
 
-  console.log(matchFound);
-
-  return matchFound;
+return matchFound;
 }
 ///////////////////////////////////////////////////
 //RELEASE 2
@@ -77,7 +73,7 @@ function randStringArray(arraylength) {
 
   for (i = 0; i < arraylength; i++) {
     string = '';
-    randNumber = (Math.floor(Math.random() * 9 + 1))
+    randNumber = Math.floor(Math.random() * 9 + 1);
     for (k = 0; k < randNumber; k++){
       var characters = "ABCDEFGHIJKLMNOPQRSTUVWXTZabcdefghiklmnopqrstuvwxyz";
       var randCharacter = Math.floor(Math.random() * characters.length);
@@ -85,18 +81,19 @@ function randStringArray(arraylength) {
     }
     stringArray.push(string);
   }
-
-  console.log(stringArray);
-
-  stringArray;
+  return stringArray;
 }
 ///////////////////////////////////////////////////
 //Drivercode
-randStringArray(3);
-randStringArray(10);
 
 longest(["Robert", "Bjorn", "Garret", "Amelia", "Susan"]);
 longest(["abcde", "abcd", "abc", "ab", "a"]);
 
 console.log(match({name: "Steven", age: 54}, {name: "Tamir", age: 54}));
 console.log(match({name: "Sahara", age: 35}, {name: "Kendrick", age: 26}));
+
+for (var j = 0; j < 10; j++) {
+  testArray =randStringArray(Math.floor(Math.random() * 9 + 1));
+  console.log(testArray);
+  console.log(longest(testArray));
+}
