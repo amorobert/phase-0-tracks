@@ -1,0 +1,34 @@
+1) SELECT * FROM project_leads;
+1|Elon Musk
+2|Sundar Pichai
+
+2) UPDATE project_leads SET name = "Jeff Bezos" WHERE name = "Sundar Pichai";
+
+3) SELECT * FROM project_leads, project_teams WHERE project_teams.project_lead_id = project_leads.id;
+2|Sundar Pichai|1|Virtual Reality|20|false|2
+2|Sundar Pichai|2|Artificial Intellegence|18|true|2
+1|Elon Musk|3|Self-Driving Cars|16|true|1
+1|Elon Musk|4|Interplanetary Travel|32|false|1
+
+4) SELECT project_teams.team, project_leads.name, project_teams.size FROM project_teams JOIN project_leads ON project_teams.project_lead_id = project_leads.id;
+Virtual Reality|Jeff Bezos|20
+Artificial Intellegence|Jeff Bezos|18
+Self-Driving Cars|Elon Musk|16
+Interplanetary Travel|Elon Musk|32
+
+5) DELETE FROM project_teams WHERE team="Artificial Intellegence";
+-----------------------------------------------
+JOINS
+
+SELECT project_teams.team, project_leads.name FROM project_teams JOIN project_leads ON project_teams.project_lead_id = project_leads.id;
+Virtual Reality|Jeff Bezos
+Self-Driving Cars|Elon Musk
+Interplanetary Travel|Elon Musk
+
+SELECT project_teams.team, project_leads.name FROM project_teams RIGHT JOIN project_leads ON project_teams.project_lead_id = project_leads.id;
+Error: RIGHT and FULL OUTER JOINs are not currently supported
+
+SELECT project_teams.team, project_leads.name, project_teams.hiring FROM project_teams LEFT JOIN project_leads ON project_teams.project_lead_id = project_leads.id;
+Virtual Reality|Jeff Bezos|false
+Self-Driving Cars|Elon Musk|true
+Interplanetary Travel|Elon Musk|false
