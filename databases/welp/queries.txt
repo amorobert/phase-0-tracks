@@ -1,0 +1,23 @@
+2) SELECT *
+FROM businesses JOIN reviews
+ON businesses.id = reviews.business_id JOIN users
+ON users.id = reviews.user_id;
+6|JoeBob's Sportz Barn|1|1|There was a bug in my food!|6|3|3|Angela|Jolie
+4|Louts Yoga|2|5|Fast and friendly!|4|2|2|Mandy|Katling
+
+3) SELECT reviews.id, businesses.name, reviews.stars, reviews.comment, users.first_name, users.last_name
+FROM businesses JOIN reviews
+ON businesses.id = reviews.business_id JOIN users
+ON users.id = reviews.user_id;
+1|JoeBob's Sportz Barn|1|There was a bug in my food!|Angela|Jolie
+2|Louts Yoga|5|Fast and friendly!|Mandy|Katling
+
+
+4) SELECT *
+FROM businesses JOIN reviews
+ON businesses.id = reviews.business_id JOIN users
+ON users.id = reviews.user_id
+WHERE business_id = 6;
+6|JoeBob's Sportz Barn|1|1|There was a bug in my food!|6|3|3|Angela|Jolie
+
+
